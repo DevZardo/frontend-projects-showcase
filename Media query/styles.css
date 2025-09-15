@@ -1,0 +1,59 @@
+h1 {
+    color: red;
+}
+
+/* sintaxe */
+@media screen and (max-width: 500px) {
+    /* max width= telas menores que alguma resolução */
+    h1 {
+        color: blue;
+    }
+}
+
+/* outros modos */
+/* screen, print, speech, all */
+@media print and (max-width: 600px) {
+    h1 {
+        color: green;
+    }
+}
+
+/* todos os modos */
+@media (max-width: 700px) {
+    h2 {
+        color: purple;
+    }
+}
+
+/* mobile first */
+@media (min-width: 200px) {
+    h2 {
+        color: teal;
+    }
+}
+
+/* and */
+@media (min-width: 300px) and (max-width: 400px) {
+    h3 {
+        font-size: 3em;
+    }
+}
+
+/* orientation */
+@media (orientation: landscape) {
+    h3 {
+        color: brown;
+    }
+}
+
+/* or */
+@media (max-width: 200px), (orientation: landscape) {
+    h3 {
+        font-size: 4em;
+    }
+}
+
+/* breakpoints */
+h5 {
+    color: aqua;
+}
