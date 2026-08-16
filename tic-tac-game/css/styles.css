@@ -1,122 +1,29 @@
-body {
-  text-align: center;
-  font-family: Helvetica, sans-serif;
+:root{
+  --board-size: min(90vw, 480px);
+  --gap: 8px;
+  --box-bg: #fff;
+  --box-border: #ccc;
+  --accent: #2b8aef;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-h1 {
-  font-size: 42px;
-}
+body{margin:0;padding:1rem;display:flex;flex-direction:column;align-items:center;gap:1rem;background:#f7f7f7;color:#222}
+h1{margin:0;font-size:1.25rem}
 
-/* botões */
+#buttons-container{display:flex;gap:.5rem;flex-wrap:wrap}
+#buttons-container button{padding:.6rem .8rem;border-radius:6px;border:1px solid #ccc;background:#fff;cursor:pointer}
 
-#buttons-container {
-  margin-bottom: 20px;
-}
+.board{width:var(--board-size);height:var(--board-size);display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);background:transparent}
+.box{background:var(--box-bg);border:2px solid var(--box-border);display:flex;align-items:center;justify-content:center;font-size:clamp(1.6rem, 6vw, 3.4rem);border-radius:6px;user-select:none}
+.hide{display:none}
 
-#buttons-container button {
-  border: none;
-  padding: 10px 15px;
-  margin: 0 10px;
-}
+/* Scoreboard */
+#scoreboard-container{margin-top:.5rem;text-align:center}
+.score-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.score-box{background:#fff;padding:.4rem .6rem;border-radius:6px;border:1px solid #eee}
 
-/* jogo */
-
-#container {
-  width: 300px;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.box {
-  height: 100px;
-  border: 5px solid #000;
-  box-sizing: border-box;
-  flex: 1 1 33%;
-}
-
-#block-1, #block-2, #block-3 {
-  border-top: none;
-}
-
-#block-1, #block-4, #block-7 {
-  border-left: none;
-}
-
-#block-3, #block-6, #block-9 {
-  border-right: none;
-}
-
-#block-7, #block-8, #block-9 {
-  border-bottom: none;
-}
-
-/* símbolos */
-
-.x {
-  font-size: 65px;
-  color: red;
-  display: inline-block;
-  line-height: 100px;
-}
-
-.o {
-  width: 50px;
-  height: 50px;
-  border: 5px solid green;
-  border-radius: 50%;
-  display: inline-block;
-  margin-top: 17px;
-}
-
-.hide {
-  display: none !important;
-}
-
-#scoreboard-container {
-  font-weight: bold;
-  margin-top: 30px;
-  font-size: 25px;
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.score-box {
-  display: inline-block;
-  margin: 0px 20px;
-}
-
-#x-scoreboard {
-  color: red;
-  margin-right: 3px;
-}
-
-#o-scoreboard {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid green;
-  border-radius: 50%;
-  margin-right: 3px;
-}
-
-/* msg vitoria */
-
-#message p {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  top: 150px;
-  width: 500px;
-  font-size: 50px;
-  background-color: #000;
-  color: #FFF;
-  padding: 20px;
+/* Small screens adjustments */
+@media (max-width:420px){
+  :root{--board-size: min(94vw, 360px); --gap:6px}
+  h1{font-size:1.05rem}
 }
