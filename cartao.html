@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pagamento.css">
+    <title>Pagamento com cartão | Doce Encanto</title>
+</head>
+<body>
+    <main>
+        <a class="brand" href="index.html">Doce Encanto</a>
+        <section class="payment-card">
+            <p class="eyebrow">PAGAMENTO SEGURO</p>
+            <h1>Cartão de crédito ou débito</h1>
+            <p class="lead">Preencha os dados abaixo para concluir seu pedido com segurança.</p>
+            <form class="payment-form" id="card-form">
+                <label>Nome impresso no cartão<input required type="text" autocomplete="cc-name" placeholder="Nome completo"></label>
+                <label>Número do cartão<input required type="text" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000"></label>
+                <div class="form-row">
+                    <label>Validade<input required type="text" autocomplete="cc-exp" placeholder="MM/AA"></label>
+                    <label>CVV<input required type="password" inputmode="numeric" autocomplete="cc-csc" placeholder="000"></label>
+                </div>
+                <button class="primary-btn" type="submit">Confirmar pagamento</button>
+            </form>
+            <p class="notice">Ambiente demonstrativo para o portfólio. Para receber pagamentos reais, conecte este formulário a um gateway como Mercado Pago, Stripe ou PagSeguro.</p>
+            <a class="back-link" href="index.html">← Voltar para a doceria</a>
+        </section>
+    </main>
+    <script>
+        document.getElementById('card-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Pagamento simulado com sucesso!');
+        });
+    </script>
+</body>
+</html>

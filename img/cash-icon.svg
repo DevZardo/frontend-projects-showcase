@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title>Ícone de dinheiro</title>
+  <rect x="5" y="12" width="38" height="24" rx="3" fill="none" stroke="#d68a2e" stroke-width="3"/>
+  <circle cx="24" cy="24" r="6" fill="none" stroke="#d68a2e" stroke-width="3"/>
+  <path fill="none" stroke="#d68a2e" stroke-linecap="round" stroke-width="3" d="M11 19h1m24 10h1"/>
+</svg>
