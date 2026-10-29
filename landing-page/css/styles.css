@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Event form */
 #event-subscription {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -58,6 +62,22 @@
   max-width: 22%;
 }
 
+#event-subscription:target #subscription-form {
+  animation: subscription-highlight 1.2s ease-in-out 3;
+}
+
+@keyframes subscription-highlight {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 186, 242, 0);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 186, 242, 0.65);
+    transform: scale(1.03);
+  }
+}
+
 #subscription-form p {
   font-size: 1.5em;
   color: var(--text-secondary);
@@ -85,6 +105,8 @@
 }
 
 .btn {
+  display: block;
+  box-sizing: border-box;
   background-color: var(--primary);
   color: var(--text-color);
   text-transform: uppercase;
@@ -93,6 +115,8 @@
   border: none;
   cursor: pointer;
   opacity: 0.8;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {
