@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -62,21 +62,45 @@
       <h2>O que você vai aprender:</h2>
       <div class="benefits">
         <div class="benefit">
-          <div id="benefit-1" class="benefit-img"></div>
+          <div
+            id="benefit-1"
+            class="benefit-img photo-trigger"
+            data-image="img/sqr-1.jpg"
+            data-image-alt="Ambiente decorado"
+            role="button"
+            tabindex="0"
+            aria-label="Ampliar foto do benefício 1"
+          ></div>
           <p>
             Alguma coisa muito legal, que vai fazer a diferença na vida do
             participante.
           </p>
         </div>
         <div class="benefit">
-          <div id="benefit-2" class="benefit-img"></div>
+          <div
+            id="benefit-2"
+            class="benefit-img photo-trigger"
+            data-image="img/sqr-2.jpg"
+            data-image-alt="Ambiente decorado"
+            role="button"
+            tabindex="0"
+            aria-label="Ampliar foto do benefício 2"
+          ></div>
           <p>
             Alguma coisa muito legal, que vai fazer a diferença na vida do
             participante.
           </p>
         </div>
         <div class="benefit">
-          <div id="benefit-3" class="benefit-img"></div>
+          <div
+            id="benefit-3"
+            class="benefit-img photo-trigger"
+            data-image="img/sqr-3.jpg"
+            data-image-alt="Ambiente decorado"
+            role="button"
+            tabindex="0"
+            aria-label="Ampliar foto do benefício 3"
+          ></div>
           <p>
             Alguma coisa muito legal, que vai fazer a diferença na vida do
             participante.
@@ -88,8 +112,16 @@
       <div id="address">
         <i class="bi bi-geo-alt-fill"></i>
         <div id="address-details">
-          <p>Rua do evento, 1333</p>
-          <p>Bairro</p>
+          <p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Oscar+Freire%2C+1000%2C+S%C3%A3o+Paulo+-+SP"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rua Oscar Freire, 1000
+            </a>
+          </p>
+          <p>São Paulo - SP</p>
           <p>Abertura: 14h</p>
         </div>
       </div>
@@ -104,7 +136,14 @@
     </section>
     <section id="details">
       <div class="detail" id="detail-1">
-        <img src="img/hrz-3.jpg" alt="" />
+        <img
+          class="photo-trigger"
+          src="img/hrz-3.jpg"
+          alt="Ambiente decorado"
+          aria-label="Ampliar foto do ambiente decorado"
+          role="button"
+          tabindex="0"
+        />
         <div class="detail-description">
           <h3>Conheça os ambientes que você vai aprender a decorar</h3>
         </div>
@@ -120,10 +159,24 @@
             <li>E muito mais...</li>
           </ul>
         </div>
-        <img src="img/hrz-4.jpg" alt="" />
+        <img
+          class="photo-trigger"
+          src="img/hrz-4.jpg"
+          alt="Detalhes de decoração"
+          aria-label="Ampliar foto dos detalhes de decoração"
+          role="button"
+          tabindex="0"
+        />
       </div>
       <div class="detail" id="detail-3">
-        <img src="img/hrz-5.jpg" alt="" />
+        <img
+          class="photo-trigger"
+          src="img/hrz-5.jpg"
+          alt="Objetos de decoração"
+          aria-label="Ampliar foto dos objetos de decoração"
+          role="button"
+          tabindex="0"
+        />
         <div class="detail-description">
           <h3>Objetos</h3>
           <ul>
@@ -147,5 +200,12 @@
       <p><span>Entre em contato:</span> oi@indecor.com.br</p>
       <p><span>Ou pelo telefone:</span> (55)99990-9999</p>
     </footer>
+    <dialog id="photo-lightbox" aria-label="Foto ampliada">
+      <button class="lightbox-close" type="button" aria-label="Fechar foto">
+        &times;
+      </button>
+      <img src="" alt="" />
+    </dialog>
+    <script src="js/lightbox.js"></script>
   </body>
 </html>
